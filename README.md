@@ -1,6 +1,6 @@
 ## Description
 
-This is a Wordpress plugin that adds the module to WPBakery Page Builder that restores his editor elements icons to the style used before version 8.0
+This WordPress plugin adds a module to WPBakery Page Builder, bringing back the old school style of editor elements icons used in versions prior to 8.0.
 
 ![](assets/images/screenshot-1.png)
 
