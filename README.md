@@ -1,2 +1,10 @@
-# wpbakery-old-school-elements-icons
-Restore the icons for WPBakery Page Builder editor elements to the style used before version 8.0.
+## Description
+
+This is a Wordpress plugin that adds the module to WPBakery Page Builder that restores his editor elements icons to the style used before version 8.0
+
+## Installation
+You can directly install the plugin from the GitHub repository.
+1. Clone the repository to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+
+![](assets/images/screenshot-1.png)
