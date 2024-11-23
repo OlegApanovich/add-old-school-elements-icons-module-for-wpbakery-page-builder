@@ -18,4 +18,4 @@ That's it. Right now if you go to any WPBakery Page Builder editor you can enjoy
 
 And remember as this plugin is just a regular WPBakery module you can always switch it on/off in WPBakery modules settings.
 
-![](assets/images/screenshot-1.png)
+![](assets/images/screenshot-2.png)
