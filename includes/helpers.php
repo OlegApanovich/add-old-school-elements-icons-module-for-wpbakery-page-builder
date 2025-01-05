@@ -37,6 +37,7 @@ if ( ! function_exists( 'wpbmod_validate_dependency_plugin' ) ) :
 			$template_payload = array(
 				'my_plugin_name'         => $my_plugin_name,
 				'dependency_plugin_name' => $dependency_plugin_name,
+                'version_to_check'       => $version_to_check,
 			);
 			$success          = false;
 		} else {

@@ -12,7 +12,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="updated error">
+<div class="notice notice-error is-dismissible">
 	<p>
 		<?php
 		echo wp_kses(
