@@ -30,13 +30,13 @@ class Wpbmod_Old_School_Elements_Icons {
 	 * @since 1.0
 	 */
 	public function init() {
-		add_action( 'wpb_after_register_frontend_editor_css', array( $this, 'register_module_css' ) );
-		add_action( 'wpb_after_register_backend_editor_css', array( $this, 'register_module_css' ) );
+		add_action( 'wpb_after_register_frontend_editor_css', [ $this, 'register_module_css' ] );
+		add_action( 'wpb_after_register_backend_editor_css', [ $this, 'register_module_css' ] );
 
-		add_filter( 'wpb_enqueue_frontend_editor_css', array( $this, 'enqueue_module_css' ) );
-		add_filter( 'wpb_enqueue_backend_editor_css', array( $this, 'enqueue_module_css' ) );
+		add_filter( 'wpb_enqueue_frontend_editor_css', [ $this, 'enqueue_module_css' ] );
+		add_filter( 'wpb_enqueue_backend_editor_css', [ $this, 'enqueue_module_css' ] );
 
-		add_filter( 'vc_add_element_box_buttons', array( $this, 'fix_elements_buttons_output' ) );
+		add_filter( 'vc_add_element_box_buttons', [ $this, 'fix_elements_buttons_output' ] );
 	}
 
 	/**
@@ -47,7 +47,9 @@ class Wpbmod_Old_School_Elements_Icons {
 	public function register_module_css() {
 		wp_register_style(
 			'wpb-module-old-school-elements-icons',
-			plugins_url( 'modules/' . $this->module_name . '/assets/css/module.css', WPBMOD_PLUGIN_FILE )
+			plugins_url( 'modules/' . $this->module_name . '/assets/css/module.css', WPBMOD_PLUGIN_FILE ),
+			[],
+			WPBMOD_PLUGIN_VERSION
 		);
 	}
 

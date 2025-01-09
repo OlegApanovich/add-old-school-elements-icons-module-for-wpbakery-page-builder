@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
 				$dependency_plugin_name,
 				$version_to_check
 			),
-			array( 'strong' => array() )
+			[ 'strong' => [] ]
 		);
 		?>
 	</p>

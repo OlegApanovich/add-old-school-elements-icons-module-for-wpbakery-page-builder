@@ -28,36 +28,36 @@ if ( ! function_exists( 'wpbmod_validate_dependency_plugin' ) ) :
 		$version_to_check = null
 	) {
 		$success          = true;
-		$template_payload = array();
+		$template_payload = [];
 		// Needed to the function "deactivate_plugins" works.
 		include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 		if ( ! is_plugin_active( $path_to_plugin ) ) {
 			// Show an error alert on the admin area.
-			$template_payload = array(
+			$template_payload = [
 				'my_plugin_name'         => $my_plugin_name,
 				'dependency_plugin_name' => $dependency_plugin_name,
-                'version_to_check'       => $version_to_check,
-			);
+				'version_to_check'       => $version_to_check,
+			];
 			$success          = false;
 		} else {
 			// Get the plugin dependency info.
-			$dep_plugin_data =
-				get_plugin_data( WP_PLUGIN_DIR . '/' . $path_to_plugin );
+			$version =
+				wpbmod_get_plugin_version( WP_PLUGIN_DIR . '/' . $path_to_plugin );
 
 			// Compare version.
 			$is_required_version = ! version_compare(
-				$dep_plugin_data['Version'],
+				$version,
 				$version_to_check,
 				'>='
 			);
 
 			if ( $is_required_version ) {
-				$template_payload = array(
+				$template_payload = [
 					'my_plugin_name'         => $my_plugin_name,
 					'dependency_plugin_name' => $dependency_plugin_name,
 					'version_to_check'       => $version_to_check,
-				);
+				];
 				$success          = false;
 			}
 		}
@@ -75,6 +75,24 @@ if ( ! function_exists( 'wpbmod_validate_dependency_plugin' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'wpbmod_get_plugin_version' ) ) :
+	/**
+	 * Get the plugin version, parsing main plugin file.
+	 *
+	 * @param string $plugin_file_path
+	 *
+	 * @return bool|string
+	 */
+	function wpbmod_get_plugin_version( $plugin_file_path ) {
+        // phpcs:ignore:WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		$plugin_data = file_get_contents( $plugin_file_path );
+		if ( preg_match( '/^[ \t\/*#@]*[Vv]ersion\s*:\s*([^\r\n]+)/m', $plugin_data, $matches ) ) {
+			return trim( $matches[1] );
+		}
+		return false;
+	}
+endif;
+
 if ( ! function_exists( 'wpbmod_get_template' ) ) :
 	/**
 	 * Include template from templates dir.
@@ -87,7 +105,8 @@ if ( ! function_exists( 'wpbmod_get_template' ) ) :
 	 * @return mixed
 	 * @since 1.0
 	 */
-	function wpbmod_include_template( $template, $variables = array(), $once = false ) {
+	function wpbmod_include_template( $template, $variables = [], $once = false ) {
+        // phpcs:ignore:WordPress.PHP.DontExtract.extract_extract
 		is_array( $variables ) && extract( $variables );
 		if ( $once ) {
 			return require_once wpbmod_template( $template );
@@ -109,7 +128,7 @@ if ( ! function_exists( 'wpbmod_get_template' ) ) :
 	 * @return string
 	 * @since 1.0
 	 */
-	function wpbmod_get_template( $template, $variables = array(), $once = false ) {
+	function wpbmod_get_template( $template, $variables = [], $once = false ) {
 		ob_start();
 		$output = wpbmod_include_template( $template, $variables, $once );
 

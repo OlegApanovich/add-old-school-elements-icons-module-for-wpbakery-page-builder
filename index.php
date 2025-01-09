@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     Add WPBakery Page Builder Old School Elements Icons Module
+ * Plugin Name:     Add Old School Elements Icons Module for WPBakery Page Builder
  * Plugin URI:      https://github.com/OlegApanovich/wpbakery-old-school-elements-icons-module
  * Description:     Add a WPBakery Page Builder module that restore elements icons to their pre-version 8.0 style.
  * Author:          OlegApanovich
@@ -28,7 +28,7 @@ class Wpbmod_Old_School_Elements_Icons_Module {
 	 * @since  1.0
 	 * @var Wpbmod_Old_School_Elements_Icons_Module|null
 	 */
-	static $instance = null;
+	public static $instance = null;
 
 	/**
 	 * Main plugin instance.
@@ -92,6 +92,7 @@ class Wpbmod_Old_School_Elements_Icons_Module {
 	 * @since 1.0
 	 */
 	private function define_constants() {
+		define( 'WPBMOD_PLUGIN_VERSION', '1.0' );
 		define( 'WPBMOD_PLUGIN_FILE', __FILE__ );
 		define( 'WPBMOD_URI', plugins_url( '', WPBMOD_PLUGIN_FILE ) );
 		define( 'WPBMOD_URI_ABSPATH', __DIR__ . '/' );
@@ -106,8 +107,8 @@ class Wpbmod_Old_School_Elements_Icons_Module {
 	 * @since 1.0
 	 */
 	private function init_hooks() {
-		add_action( 'init', array( $this, 'init' ), 0 );
-		add_filter( 'vc_third_party_modules_list', array( $this, 'add_modules_to_wpbakery' ) );
+		add_action( 'init', [ $this, 'init' ], 0 );
+		add_filter( 'vc_third_party_modules_list', [ $this, 'add_modules_to_wpbakery' ] );
 	}
 
 	/**
@@ -158,14 +159,14 @@ class Wpbmod_Old_School_Elements_Icons_Module {
 	public function get_module_list() {
 		return apply_filters(
 			'wpbmod_modules_list',
-			array(
-				'wpbmod-old-school-elements-icons' => array(
+			[
+				'wpbmod-old-school-elements-icons' => [
 					'name'           => esc_html__( 'Old School Elements Icons', 'js_composer' ),
 					'main_file_path' => WPBMOD_MODULES_DIR . '/old-school-elements-icons/module.php',
 					'module_class'   => 'Wpbmod_Old_School_Elements_Icons',
 					'is_active'      => true,
-				),
-			)
+				],
+			]
 		);
 	}
 }
