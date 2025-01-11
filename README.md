@@ -2,6 +2,9 @@
 
 This WordPress plugin adds a module to WPBakery Page Builder, bringing back the old school style of editor elements icons used in versions prior to 8.0.
 
+If, like me, you fall in love with interfaces you've used for decades, then this plugin can be useful for you if you don’t feel comfortable with the new 'Add Element' popup icons in WPBakery Page Builder introduced after version 8.0.
+After installing the plugin, you can enjoy the old icon style again in both the backend and frontend WPBakery Page Builder editors. You can always switch it on or off in the Module interface on the WPBakery Page Builder settings page.
+
 ![](assets/images/screenshot-1.png)
 
 ## Installation
