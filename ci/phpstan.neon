@@ -1,0 +1,11 @@
+# to use check ../vendor/bin/phpstan analyse (inside docker container)
+parameters:
+    level: 5 # Adjust the strictness level (0 to 9).
+    bootstrapFiles:
+        - ../../../../wp-load.php # Load WordPress core files for analysis.
+    ignoreErrors:
+    paths:
+        - ../includes
+        - ../src
+        - ../config
+        - ../templates
