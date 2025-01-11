@@ -93,7 +93,7 @@ if ( ! function_exists( 'wpbmod_get_plugin_version' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'wpbmod_get_template' ) ) :
+if ( ! function_exists( 'wpbmod_include_template' ) ) :
 	/**
 	 * Include template from templates dir.
 	 *
