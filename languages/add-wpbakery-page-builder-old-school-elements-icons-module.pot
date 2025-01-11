@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.14; wp-6.6.2\n"
-"X-Domain: add-wpbakery-page-builder-old-school-elements-icons-module"
+"X-Domain: add-old-school-elements-icons-module-for-wpbakery-page-builder"
 
 #. Description of the plugin
 msgid ""

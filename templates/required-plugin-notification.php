@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 			// translators: %1$s: current plugin name, %2$s plugin name that current plugin dependent on.
 				__(
 					'The plugin <strong>"%1$s"</strong> needs the plugin <strong>"%2$s"</strong> active with version <strong>%3$s</strong> or higher.',
-					'add-wpbakery-page-builder-old-school-elements-icons-module'
+					'add-old-school-elements-icons-module-for-wpbakery-page-builder'
 				),
 				$my_plugin_name,
 				$dependency_plugin_name,

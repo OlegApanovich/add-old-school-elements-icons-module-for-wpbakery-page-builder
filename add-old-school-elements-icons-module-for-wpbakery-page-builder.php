@@ -5,7 +5,7 @@
  * Description:       Add a WPBakery Page Builder module that restore elements icons to their pre-version 8.0 style.
  * Author:            OlegApanovich
  * Author URI:        https://github.com/OlegApanovich
- * Text Domain:       add-wpbakery-page-builder-old-school-elements-icons-module
+ * Text Domain:       add-old-school-elements-icons-module-for-wpbakery-page-builder
  * Domain Path:       /languages
  * Requires at least: 4.7
  * Requires PHP:      5.6
@@ -137,7 +137,7 @@ class Wpbmod_Old_School_Elements_Icons_Module {
 	 */
 	public function load_plugin_textdomain() {
 		load_plugin_textdomain(
-			'add-wpbakery-page-builder-old-school-elements-icons-module',
+			'add-old-school-elements-icons-module-for-wpbakery-page-builder',
 			false,
 			WPBMOD_URI_ABSPATH . '/languages'
 		);
