@@ -7,6 +7,8 @@ Stable tag: 1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
+Restore the old school icons in WPBakery Page Builder, as used before Version 8.0.
+
 == Description ==
 
 This WordPress plugin adds a module to [WPBakery Page Builder plugin](https://wpbakery.com), bringing back the old school style of editor elements icons that WPBakery used in versions prior to 8.0.
