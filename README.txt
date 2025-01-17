@@ -1,7 +1,7 @@
 === Add Old School Elements Icons Module for WPBakery Page Builder ===
 Contributors: mrdollar4444
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=K9NTJ6E2RQN3A&source=url
-Tags: wpbakery, wpbakery elements 
+Tags: wpbakery, wpbakery elements, wpbakery elements, wpbakery timeline element, timeline element 
 Tested up to: 6.7
 Stable tag: 1.0
 License: GPLv3 or later
@@ -14,17 +14,16 @@ This WordPress plugin adds a module to [WPBakery Page Builder plugin](https://wp
 If, like me, you fall in love with interfaces you've used for decades, then this plugin can be useful for you if you don’t feel comfortable with the new 'Add Element' popup icons in WPBakery Page Builder introduced after version 8.0.
 After installing the plugin, you can enjoy the old icon style again in both the backend and frontend WPBakery Page Builder editors. You can always switch it on or off in the Module interface on the WPBakery Page Builder settings page.
 
-Source file code you can find on [our github plugin page](https://github.com/OlegApanovich/add-wpbakery-old-school-elements-icons-module)
+Source file code you can find on [our GitHub plugin page](https://github.com/OlegApanovich/add-wpbakery-old-school-elements-icons-module)
 
 == Installation ==
 1. Upload the plugin folder to the ‘/wp-content/plugins/’ directory.
-2. And remember as this plugin is just a regular WPBakery module you can always switch it on/off in WPBakery modules settings.
+2. Activate the plugin through the ‘Plugins’ menu in WordPress admin dashboard.
 
 == Screenshots ==
 
 1. Restore old style icons of WPBakery Page Builder
-
-2. You will be redirected to google plugin application page. Please choose google account where you store your google sheet import file on google drive.
+2. Remember, as this plugin is just a regular WPBakery module you can always switch it on/off in WPBakery modules settings.
 
 == Changelog ==
 
