@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Add Old School Elements Icons Module for WPBakery Page Builder
  * Plugin URI:        https://github.com/OlegApanovich/add-old-school-elements-icons-module-for-wpbakery-page-builder
- * Description:       Add a WPBakery Page Builder module that restore elements icons to their pre-version 8.0 style.
+ * Description:       Add a WPBakery Page Builder module that restores elements icons to their pre-version 8.0 style.
  * Author:            OlegApanovich
  * Author URI:        https://github.com/OlegApanovich
  * Text Domain:       add-old-school-elements-icons-module-for-wpbakery-page-builder
@@ -12,8 +12,6 @@
  * Version:           1.0
  * License:           GPL-3.0+
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
- *
- * Requires at least: 4.9
  */
 
 defined( 'ABSPATH' ) || exit;
